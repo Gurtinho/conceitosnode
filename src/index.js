@@ -31,13 +31,14 @@ app.post('/users', (req, res) => {
   if(userExists) {
     return res.status(400).json({ error: 'User Already Exists!' });
   };
-  users.push({
+  const user = {
     id: uuid(),
     name,
     username,
     todos: []
-  });
-  return res.status(201).json(users);
+  }
+  users.push(user);
+  return res.status(201).json(user);
 });
 
 // listar usuário
