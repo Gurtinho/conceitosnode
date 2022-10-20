@@ -8,7 +8,6 @@ app.use(cors());
 app.use(express.json());
 
 const users = [];
-// console.log('testing');
 
 // middlewares
 function checksExistsUserAccount(req, res, next) {
