@@ -49,7 +49,7 @@ app.get('/users', checksExistsUserAccount, (req, res) => {
 // listar tarefas
 app.get('/todos', checksExistsUserAccount, (req, res) => {
   const { user } = req;
-  return res.json(user.todos);
+  return res.status(201).json(user.todos);
 });
 
 // criar tarefas
