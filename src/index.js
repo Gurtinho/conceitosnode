@@ -28,9 +28,6 @@ app.post('/users', (req, res) => {
   const userExists = users.find((user) => {
     return user.username === username;
   });
-  if(userExists) {
-    return res.status(400).json({ error: 'User Already Exists!' });
-  };
   users.push({
     id: uuid(),
     name,
